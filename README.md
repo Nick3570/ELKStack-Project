@@ -4,7 +4,7 @@ Used to deploy and configure ELK Stack to a network
 
 The files in this repository were used to configure the network depicted below.
 
-![TODO: Update the path with the name of your diagram](Images/diagram_filename.png)
+https://github.com/Nick3570/ELKStack-Project/blob/main/Diagrams/ELK%20Network%20Diagram.JPG
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the yml file may be used to install only certain pieces of it, such as Filebeat.
 
@@ -28,9 +28,10 @@ This document contains the following details:
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
 Load balancing ensures that the application will be highly available, in addition to restricting congestion to the network.
-- _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
+Load balancers protect the availability to a network by distributing traffic across multiple servers to reduce load. The advantage of a Jump Box is being able to maintain configuration files for an entire network and be able to distribute them all easily while also being able to have a way to connect to machines on a network that don't have a public IP address.
+
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the data and system logs.
 - _TODO: What does Filebeat watch for?_
 - _TODO: What does Metricbeat record?_
 
