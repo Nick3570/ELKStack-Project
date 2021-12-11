@@ -31,9 +31,10 @@ Load balancing ensures that the application will be highly available, in additio
 
 Load balancers protect the availability to a network by distributing traffic across multiple servers to reduce load. The advantage of a Jump Box is being able to maintain configuration files for an entire network and be able to distribute them all easily while also being able to have a way to connect to machines on a network that don't have a public IP address.
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the data and system logs.
-- _TODO: What does Filebeat watch for?_
-- _TODO: What does Metricbeat record?_
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the network and system logs.
+
+Filebeat watches for changes to system logs.
+Metricbeat records statistics and metrics for services running on the server.
 
 The configuration details of each machine may be found below.
 
@@ -44,14 +45,15 @@ The configuration details of each machine may be found below.
 | Web1                | Web Server      | 10.0.0.5                    | Linux            |
 | Web2                | Web Server      | 10.0.0.6                    | Linux            |
 | Web3                | Web Server      | 10.0.0.7                    | Linux            |
+| Load Balancer       | Load Balancer   | 20.121.7.62                 |                  |
 | ElkStack            | ELKStack Server | 10.1.0.4/40.83.132.151      | Linux            |
 
 ### Access Policies
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the _____ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_
+Only the Jump Box machine and the ELKStack machine can accept connections from the Internet. Access to these machines is only allowed from the following IP addresses:
+- 32.210.210.56
 
 Machines within the network can only be accessed by _____.
 - _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
