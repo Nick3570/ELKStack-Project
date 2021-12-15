@@ -73,14 +73,14 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
 It allows configuring of many machines with the exact same specifications at the same time, ensuring that they all have exactly what they need to run.
 
 The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
-- ...
-- ...
+- First it installs docker, allowing the machine to create and run containers.
+- It then increases the virtual memory, allowing ELK Stack to run.
+- Afterwards, it pulls down an image of an ELK Stack container and assigns ports to be opened, allowing it to pull data from the Web Servers.
+- Finally, it enables Docker to start whenever the machine is booted up, ensuring that the ELK container is always running.
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-
-![TODO: Update the path with the name of your screenshot of docker ps output](Images/docker_ps_output.png)
+https://github.com/Nick3570/ELKStack-Project/blob/main/images/elk%20container.png?raw=true
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
